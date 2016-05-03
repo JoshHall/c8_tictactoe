@@ -3,18 +3,21 @@ body {
     width:100vw;
     margin:0;
     padding:0;
-    background-color: deepskyblue;
+    background-color: black;
+    color:limegreen;
+    text-shadow: 0 0 5px lawngreen, 0 0 10px lawngreen, 0 0 15px lawngreen, 0 0 20px lawngreen;
 }
 header {
     text-align: center;
-    font-size: 4vh;
+    font-size: 8vh;
 }
 .tile {
     height:4vh;
     width:2vw;
     background-color:cyan;
-    box-shadow: 5px 5px 5px 0 lightgreen, 10px 10px 10px 0 lightgreen;
+    box-shadow: 5px 5px 5px 0 lightgreen;
     border:2px solid black;
+    opacity:0.6;
 }
 .game_area {
     background-color: black;

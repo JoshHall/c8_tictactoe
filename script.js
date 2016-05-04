@@ -7,11 +7,10 @@ var dimension = 3;
 var user_input;
 var first_players_turn=true;
 
-var div_width = (30 / dimension) + "vw";
+var div_dimensions = (30 / dimension) + "vw";
 var text_size = (15 / dimension) + "vw";
 var number_of_tiles = 7;
 var clone;
-var div_dimensions = (30 / dimension) + "vw";
 var x_array=[];
 var o_array=[];
 var x_numbered_array=[];
@@ -154,15 +153,15 @@ function board_maker_plus() {
 //This will be the function that dynamically increases the gameboard size
     ++dimension;
     var tile_id = 10;
-    div_width = (30 / dimension) + "vw";
+    div_dimensions = (30 / dimension) + "vw";
     text_size = (15 / dimension) + "vw";
     for (var i = 1; i <= number_of_tiles; i++) {
-        var new_tile = $('<div>').addClass('tile').attr('id', tile_id).css({"width": div_width, "height": div_width, "font-size":text_size});
+        var new_tile = $('<div>').addClass('tile').attr('id', tile_id).css({"width": div_dimensions, "height": div_dimensions, "font-size":text_size});
         $('.game_area').append(new_tile);
         tile_id++;
     }
     number_of_tiles += 2;
-    $('.tile').css({"width": div_width, "height": div_width, "font-size":text_size}).on('click', function() {
+    $('.tile').css({"width": div_dimensions, "height": div_dimensions, "font-size":text_size}).on('click', function() {
         if($(this).html()=='') {
             if (first_players_turn == true) {
                 // place_marker($(this),'X');
@@ -189,9 +188,11 @@ function board_maker_plus() {
 //Function to display stats
 function stats() {
 //player 1 wins
+
     $('p1win').html(i++);
 //player 2 wins
     $('p2win').html(i++);
+
 }
 
 //$ajax to store locally

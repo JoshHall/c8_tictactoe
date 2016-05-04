@@ -92,8 +92,10 @@ function restore_me () {
     var restored_string_array = localStorage.getItem('storedArray');
     var restored_from_local = JSON.parse(restored_string_array);
     for (var i = 0; i < restored_from_local.length; i++) {
+        console.log('in for');
         if ($('div').attr('id', i + 1)){
         $(this).html(restored_from_local[i]);
+            console.log('this should show on html', this);
         }
     }
     console.log('this is restored string array storage', restored_string_array);

@@ -160,9 +160,9 @@ function board_maker_plus() {
 //Function to display stats
 function stats() {
 //player 1 wins
-    $('p1win').html();
+    $('p1win').html(i++);
 //player 2 wins
-    $('p2win').html();
+    $('p2win').html(i++);
 }
 
 //$ajax to store locally

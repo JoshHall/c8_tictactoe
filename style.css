@@ -4,8 +4,8 @@ body {
     margin:0;
     padding:0;
     background-color: black;
-    color:limegreen;
-    text-shadow: 0 0 5px lawngreen, 0 0 10px lawngreen, 0 0 15px lawngreen, 0 0 20px lawngreen;
+    color:lawngreen;
+    text-shadow: 0 0 5px limegreen, 0 0 10px limegreen, 0 0 15px limegreen, 0 0 20px limegreen;
 }
 header {
     text-align: center;
@@ -17,7 +17,7 @@ header {
     height:70vh;
     padding:5vh 5vw;
     display: inline-block;
-    /*margin-left:40vw;*/
+    margin-left:30vw;
 }
 .game_area {
     height:100%;
@@ -36,7 +36,12 @@ header {
     border:2px solid black;
     /*opacity:0.6;*/
 }
-
+button {
+    background-color: black;
+    color: cyan;
+    text-shadow: 0 0 5px darkcyan, 0 0 10px darkcyan, 0 0 15px darkcyan, 0 0 20px darkcyan;
+    border: 1px double darkcyan;
+}
 
 .stats {
     display:inline;

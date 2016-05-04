@@ -7,6 +7,14 @@ body {
     color:lawngreen;
     text-shadow: 0 0 5px limegreen, 0 0 10px limegreen, 0 0 15px limegreen, 0 0 20px limegreen;
 }
+nav p:first-child{
+    color:limegreen;
+    text-shadow: 0 0 5px lawngreen, 0 0 10px lawngreen, 0 0 15px lawngreen, 0 0 20px lawngreen;
+}
+nav p:nth-child(2){
+    color:crimson;
+    text-shadow: 0 0 5px red, 0 0 10px red, 0 0 15px red, 0 0 20px red;
+}
 header {
     text-align: center;
     font-size: 8vh;
@@ -14,10 +22,12 @@ header {
 .container {
     background-color: black;
     width:30vw;
-    height:70vh;
     padding:5vh 5vw;
     display: inline-block;
     margin-left:30vw;
+    height:30vh;
+    /*display: inline-block;*/
+    /*margin-left:40vw;*/
 }
 .game_area {
     height:100%;

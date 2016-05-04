@@ -6,23 +6,46 @@ var dimension = 3;
 var game_array = [];
 var user_input;
 var first_players_turn=true;
-var div_width = (45 / dimension) + "vw";
-
+var div_dimensions = (30 / dimension) + "vw";
+var x_array=[];
+var o_array=[];
+var x_numbered_array=[];
+var o_numbered_array=[];
+var x_index=0;
+var o_index=0;
 
 //DOC READY/CLICK HANDLERS
 $(document).ready(function(){
-    $('.tile').css("width", div_width).on('click', function() {
+    $('.tile').css({"width": div_dimensions, "height": div_dimensions}).on('click', function() {
         if($(this).html()=='') {
             if (first_players_turn == true) {
                 // place_marker($(this),'X');
-                $(this).html('X');
+                $(this).html('X').css({"color":"limegreen", "text-shadow":"0 0 5px lawngreen, 0 0 10px lawngreen, 0 0 15px lawngreen, 0 0 20px lawngreen"});
                 first_players_turn = false;
                 console.log('is now 2nd players turn');
+                $('body').css({"color":"crimson", "text-shadow":"0 0 5px red, 0 0 10px red, 0 0 15px red, 0 0 20px red"});
+                x_array[x_index]=$(this).attr('id');
+                console.log(x_array[x_index]);
+                x_numbered_array[x_index]=parseFloat($(this).attr('id'));
+                console.log(x_numbered_array[x_index]);
+                x_index++;
+                console.log("new x index value: ",x_index);
+                console.log("stringified x_array: ",x_array);
+                console.log("numbered x_array: ",x_numbered_array);
             }
             else{
-                $(this).html('O');
+                $(this).html('O').css({'color':"crimson", "text-shadow":"0 0 5px red, 0 0 10px red, 0 0 15px red, 0 0 20px red"});
                 first_players_turn=true;
                 console.log('is now first players turn');
+                $('body').css({"color":"limegreen", "text-shadow":"0 0 5px lawngreen, 0 0 10px lawngreen, 0 0 15px lawngreen, 0 0 20px lawngreen"});
+                o_array[o_index]=$(this).attr('id');
+                console.log(o_array[o_index]);
+                o_numbered_array[o_index]=parseFloat($(this).attr('id'));
+                console.log(o_numbered_array[o_index]);
+                o_index++;
+                console.log("new o index value: ",o_index);
+                console.log("string o_array: ",o_array);
+                console.log("numbered x_array: ",o_numbered_array);
             }
         }
         else{

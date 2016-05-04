@@ -44,6 +44,7 @@ header {
     background-color:cyan;
     box-shadow: 5px 5px 5px 0 lightgreen;
     border:2px solid black;
+    padding-top: 1.5vh;
     /*opacity:0.6;*/
 }
 button {
@@ -55,4 +56,22 @@ button {
 
 .stats {
     display:inline;
+}
+footer{
+    text-align: center;
+    position:relative;
+    top:10vh;
+}
+footer p {
+    font-size: 3vh;
+}
+.plus {
+    position:relative;
+    bottom:6vh;
+    left:20vw;
+    font-size: 2vh;
+}
+.turn_indicator {
+    text-align: center;
+    font-size: 4vh;
 }

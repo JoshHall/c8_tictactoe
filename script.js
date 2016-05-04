@@ -4,7 +4,10 @@
 //Global variables
 var dimension = 3;
 var game_array = [];
+//below is the slider input
 var user_input;
+var number_of_tiles = 7;
+$('.game_area').clone(true);
 
 //Function to check board size for win conditions
 function check_board_size() {
@@ -61,79 +64,64 @@ function check_win(x,y){
 
 }
 
-
-
-// Function that switches players
-function player_swap(){
-//this wil only rotate players and nothing else for now
-}
-
-//Function to place X or O
-function place_marker(){
-//if statement for a spot already being used
-
-}
-
 //Function that Resets the gameboard
 function reset_board(){
 //resets gameboard but keeps all stats and wins
-    game_array = 0;
+    $('.game_area').clone();
 }
 
 //Function to switch boards
-// function board_maker_plus(){
-// //This will be the function that dynamically increases the gameboard size
-//   ++dimension;
-//   var new_sector = $('<div>').addClass('sector');
-//   $('.row').append(new_sector);
-//   var new_row = $('<div>').addClass('row')
-//   for (var i=1; i <= dimension; i++) {
-//       $(new_row).append(new_sector);
-//   }
-//     $('.game_area').append(new_row);
-// }
-//
-// function board_maker_minus () {
-//     var saved = --dimension;
-//     dimension = 3;
-//     saved -= dimension;
-//     var new_sector = $('<div>').addClass('sector');
-//     $('.row').append(new_sector);
-//     var new_row = $('<div>').addClass('row')
-//     for (var i=0; i < dimension; i++) {
-//         $(new_row).append(new_sector);
-//     }
-//     $('.game_area').append(new_row);
-// }
+function board_maker_plus() {
+//This will be the function that dynamically increases the gameboard size
+    ++dimension;
+    var tile_id = 10;
+    for (var i = 1; i <= number_of_tiles; i++) {
+        var new_tile = $('<div>').addClass('tile').attr('id', tile_id);
+        tile_id++;
+    }
+    $('.game_area').append(new_tile);
+    number_of_tiles += 2;
+}
+
+
+
+
 
 //Function to display stats
-function player_stats() {
+function stats() {
 //player 1 wins
-
+    $('p1win').html();
 //player 2 wins
-
+    $('p2win').html();
 }
 
 //$ajax to store locally
-$.ajax({
-    url:
-    method:
-    dataType:
-    success: function(stored_info){
+// $.ajax({
+//     url:
+//     method:
+//     dataType:
+//     success: function(stored_info){
+//
+//     }
+// })
 
-    }
-})
 
 
 
-for (var i=1; i <= dimension; i++) {
-    var row_class_name ='row' + i;
-    var new_row = '<div class="' + row_class_name + '"></div>';
-//         $('<div>').addClass(row_class_name);
-//     for (var i=1; i <= dimension; i++) {
-//         var tile_class_name ='tile' + i
-//         var new_tile = $('<div>').addClass(tile_class_name);
 
-    game_array.push(new_row);
-    console.log(new_row);
-}
+
+//Extra stuff
+//
+// for (var i=1; i <= dimension; i++) {
+//     var row_class_name ='row' + i;
+//     var new_row = '<div class="' + row_class_name + '"></div>';
+//     console.log(new_row);
+//     for (var j=1; j <= dimension; j++) {
+//         var tile_class_name = 'tile' + j;
+//         var new_tile = '<div class="' + tile_class_name + '"></div>';
+//         console.log(new_tile);
+//     }
+//     $(new_row).append(new_tile);
+//     game_array.push(new_row);
+// }
+// console.log(game_array);

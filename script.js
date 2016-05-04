@@ -91,13 +91,48 @@ function saving_local () {
 function restore_me () {
     var restored_string_array = localStorage.getItem('storedArray');
     var restored_from_local = JSON.parse(restored_string_array);
-    for (var i = 0; i < restored_from_local.length; i++) {
-        console.log('in for');
-        if ($('div').attr('id', i + 1)){
-        $(this).html(restored_from_local[i]);
-            console.log('this should show on html', this);
+
+    $('.game_area').html(restored_from_local.localDiv);
+    $('.tile').css({"width": div_dimensions, "height": div_dimensions, "font-size":text_size}).on('click', function() {
+        //onclick, if it is first player's turn, place an x and change player turn, send
+        // the clicked tile's info to arrays. else do the same for player 2 with an o.
+        if($(this).html()=='') {
+            if (first_players_turn == true) {
+                // place_marker($(this),'X');
+                $('.turn_indicator').html('Player: 2');
+                $(this).html('X').css({"color":"limegreen", "text-shadow":"0 0 5px lawngreen, 0 0 10px lawngreen, 0 0 15px lawngreen, 0 0 20px lawngreen"});
+                first_players_turn = false;
+                console.log('is now 2nd players turn');
+                $('body').css({"color":"crimson", "text-shadow":"0 0 5px red, 0 0 10px red, 0 0 15px red, 0 0 20px red"});
+                x_array[x_index]=$(this).attr('id');
+                console.log(x_array[x_index]);
+                x_numbered_array[x_index]=parseFloat($(this).attr('id'));
+                console.log(x_numbered_array[x_index]);
+                x_index++;
+                console.log("new x index value: ",x_index);
+                console.log("stringified x_array: ",x_array);
+                console.log("numbered x_array: ",x_numbered_array);
+            }
+            else{
+                $('.turn_indicator').html('Player: 1');
+                $(this).html('O').css({'color':"crimson", "text-shadow":"0 0 5px red, 0 0 10px red, 0 0 15px red, 0 0 20px red"});
+                first_players_turn=true;
+                console.log('is now first players turn');
+                $('body').css({"color":"limegreen", "text-shadow":"0 0 5px lawngreen, 0 0 10px lawngreen, 0 0 15px lawngreen, 0 0 20px lawngreen"});
+                o_array[o_index]=$(this).attr('id');
+                console.log(o_array[o_index]);
+                o_numbered_array[o_index]=parseFloat($(this).attr('id'));
+                console.log(o_numbered_array[o_index]);
+                o_index++;
+                console.log("new o index value: ",o_index);
+                console.log("string o_array: ",o_array);
+                console.log("numbered x_array: ",o_numbered_array);
+            }
         }
-    }
+        else{
+            return;
+        }
+    })
     console.log('this is restored string array storage', restored_string_array);
     console.log('this is restored_from_local',restored_from_local);
 }

@@ -7,8 +7,11 @@ var game_array = [];
 //below is the slider input
 var user_input;
 var number_of_tiles = 7;
-$('.game_area').clone(true);
+var clone = $('.game_area').clone(true);
 
+$(document).ready( function(){
+    $('.reset').on('click', reset_board);
+})
 //Function to check board size for win conditions
 function check_board_size() {
 //Switch statement to check 3x3/4x4 || 5x5-10x10 || 11x11-20x20
@@ -67,7 +70,7 @@ function check_win(x,y){
 //Function that Resets the gameboard
 function reset_board(){
 //resets gameboard but keeps all stats and wins
-    $('.game_area').clone();
+    $('.game_area').clone().append(clone);
 }
 
 //Function to switch boards

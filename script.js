@@ -5,7 +5,31 @@
 var dimension = 3;
 var game_array = [];
 var user_input;
+var first_players_turn=true;
+var div_width = (45 / dimension) + "vw";
 
+
+//DOC READY/CLICK HANDLERS
+$(document).ready(function(){
+    $('.tile').css("width", div_width).on('click', function() {
+        if($(this).html()=='') {
+            if (first_players_turn == true) {
+                // place_marker($(this),'X');
+                $(this).html('X');
+                first_players_turn = false;
+                console.log('is now 2nd players turn');
+            }
+            else{
+                $(this).html('O');
+                first_players_turn=true;
+                console.log('is now first players turn');
+            }
+        }
+        else{
+        return;
+        }
+    })
+});
 //Function to check board size for win conditions
 function check_board_size() {
 //Switch statement to check 3x3/4x4 || 5x5-10x10 || 11x11-20x20
@@ -63,15 +87,19 @@ function check_win(x,y){
 
 
 
-// Function that switches players
-function player_swap(){
-//this wil only rotate players and nothing else for now
-}
-
-//Function to place X or O
-function place_marker(){
+//Function to place X or O and swap player
+function place_marker(clicked_tile, marker){
 //if statement for a spot already being used
-
+    clicked_tile.html(marker);
+    console.log(marker);
+    if(first_players_turn==true){
+        first_players_turn=false;
+        console.log('is now 2nd players turn');
+    }
+    else{
+        first_players_turn=true;
+        console.log('is now first players turn');
+    }
 }
 
 //Function that Resets the gameboard
@@ -115,14 +143,14 @@ function player_stats() {
 }
 
 //$ajax to store locally
-$.ajax({
-    url:
-    method:
-    dataType:
-    success: function(stored_info){
-
-    }
-})
+// $.ajax({
+//     url:
+//     method:
+//     dataType:
+//     success: function(stored_info){
+//
+//     }
+// })
 
 
 

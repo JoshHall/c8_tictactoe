@@ -43,7 +43,6 @@ header {
     background-color:cyan;
     box-shadow: 5px 5px 5px 0 lightgreen;
     border:2px solid black;
-    vertical-align: center;
     /*opacity:0.6;*/
 }
 button {
@@ -73,6 +72,7 @@ footer p {
     left:20vw;
     font-size: 2vh;
 }
+
 .turn_indicator {
     text-align: center;
     font-size: 4vh;

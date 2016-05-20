@@ -79,7 +79,6 @@ function core_game(clicked_el) {
     }
 }
 
-
 //Function to store locally with JSON
 function saving_local () {
     var jsonObject = {'gameArea': $('.game_area').html()};
@@ -114,9 +113,7 @@ function board_maker_plus() {
         $('body').css({"color":"crimson", "text-shadow":"0 0 5px red, 0 0 10px red, 0 0 15px red, 0 0 20px red"});
     }
     else {
-        $('.turn_indicator').html('Player: 1');
-        first_players_turn=true;
-        $('body').css({"color":"limegreen", "text-shadow":"0 0 5px lawngreen, 0 0 10px lawngreen, 0 0 15px lawngreen, 0 0 20px lawngreen"});
+        $('#how_many_to_win').text('Tiles to Win: 5')
     }
 
     var tile_id = (dimension * dimension) + 1;

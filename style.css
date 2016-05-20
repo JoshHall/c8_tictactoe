@@ -36,6 +36,7 @@ header {
 .tile {
     /*height:15vw;*/
     float:left;
+    padding-top: 7%;
     text-align: center;
     /*font-size: 5vw;*/
     box-sizing: border-box;

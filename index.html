@@ -6,6 +6,7 @@
     <script src="script.js"></script>
 </head>
 <body>
+<section class="container">
     <header>Tic Tac Toe</header>
     <nav class="stats">
         <!--<p>Player 1 Victories: <span class="p1win">0</span></p>-->
@@ -13,7 +14,6 @@
         <p class="turn_indicator">Player: 1</p>
         <p class="turn_indicator" id="how_many_to_win">Tiles to Win: 3</p>
     </nav>
-    <section class="container">
         <section class="game_area">
             <div class="tile 1" id="1"></div>
             <div class="tile 2" id="2"></div>
@@ -25,14 +25,14 @@
             <div class="tile 8" id="8"></div>
             <div class="tile 9" id="9"></div>
         </section>
-    </section>
-<footer>
-    <form>
+    <footer>
+        <form>
             <p>Game Size:</p>
-        <button class="plus" type="button" onclick="board_maker_plus()">Increase</button>
-        <button class="reset">Reset</button>
-        <button class="restore" type="button">Restore</button>
-    </form>
-</footer>
+            <button class="plus" type="button">Increase</button>
+            <button class="reset">Reset</button>
+            <button class="restore" type="button">Restore</button>
+        </form>
+    </footer>
+</section>
 </body>
 </html>

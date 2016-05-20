@@ -21,22 +21,22 @@ header {
 }
 .container {
     background-color: black;
-    width:30vw;
-    padding:5vh 5vw;
-    display: inline-block;
-    margin-left:30vw;
-    height:30vh;
+    width:100%;
+    height:100%;
     /*display: inline-block;*/
     /*margin-left:40vw;*/
 }
 .game_area {
-    height:100%;
-    width:100%;
+    height:50%;
+    width:50%;
     position:relative;
+    margin: 0 auto;
 }
+
 .tile {
     /*height:15vw;*/
     float:left;
+    padding-top: 7%;
     text-align: center;
     /*font-size: 5vw;*/
     box-sizing: border-box;
@@ -44,7 +44,6 @@ header {
     background-color:cyan;
     box-shadow: 5px 5px 5px 0 lightgreen;
     border:2px solid black;
-    padding-top: 1.5vh;
     /*opacity:0.6;*/
 }
 button {
@@ -57,10 +56,13 @@ button {
 .stats {
     display:inline;
 }
+
 footer{
     text-align: center;
-    position:relative;
-    top:25vh;
+    position:absolute;
+    bottom: 7%;
+    left: 30%
+
 }
 footer p {
     font-size: 3vh;
@@ -71,7 +73,12 @@ footer p {
     left:20vw;
     font-size: 2vh;
 }
+
 .turn_indicator {
     text-align: center;
     font-size: 4vh;
 }
+
+.player_1 {
+    color:limegreen;
+    text-shadow:0 0 5px lawngreen, 0 0 10px lawngreen, 0 0 15px lawngreen, 0 0 20px lawngreen}

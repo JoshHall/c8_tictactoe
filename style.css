@@ -1,0 +1,84 @@
+body {
+    height:100vh;
+    width:100vw;
+    margin:0;
+    padding:0;
+    background-color: black;
+    color:lawngreen;
+    text-shadow: 0 0 5px limegreen, 0 0 10px limegreen, 0 0 15px limegreen, 0 0 20px limegreen;
+}
+nav p:first-child{
+    color:limegreen;
+    text-shadow: 0 0 5px lawngreen, 0 0 10px lawngreen, 0 0 15px lawngreen, 0 0 20px lawngreen;
+}
+nav p:nth-child(2){
+    color:crimson;
+    text-shadow: 0 0 5px red, 0 0 10px red, 0 0 15px red, 0 0 20px red;
+}
+header {
+    text-align: center;
+    font-size: 8vh;
+}
+.container {
+    background-color: black;
+    width:100%;
+    height:100%;
+    /*display: inline-block;*/
+    /*margin-left:40vw;*/
+}
+.game_area {
+    height:50%;
+    width:50%;
+    position:relative;
+    margin: 0 auto;
+}
+
+.tile {
+    /*height:15vw;*/
+    float:left;
+    padding-top: 7%;
+    text-align: center;
+    /*font-size: 5vw;*/
+    box-sizing: border-box;
+    display: inline-block;
+    background-color:cyan;
+    box-shadow: 5px 5px 5px 0 lightgreen;
+    border:2px solid black;
+    /*opacity:0.6;*/
+}
+button {
+    background-color: black;
+    color: cyan;
+    text-shadow: 0 0 5px darkcyan, 0 0 10px darkcyan, 0 0 15px darkcyan, 0 0 20px darkcyan;
+    border: 1px double darkcyan;
+}
+
+.stats {
+    display:inline;
+}
+
+footer{
+    text-align: center;
+    position:absolute;
+    bottom: 7%;
+    left: 80%
+
+}
+footer p {
+    font-size: 3vh;
+}
+.plus {
+    position:relative;
+    bottom:6vh;
+    left:10vw;
+    font-size: 2vh;
+}
+
+.turn_indicator {
+    text-align: center;
+    font-size: 4vh;
+}
+
+.player_1 {
+    color:limegreen;
+    text-shadow:0 0 5px lawngreen, 0 0 10px lawngreen, 0 0 15px lawngreen, 0 0 20px lawngreen}

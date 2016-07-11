@@ -1,0 +1,38 @@
+<!Doctype html>
+<html>
+<head>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+<section class="container">
+    <header>Tic Tac Toe</header>
+    <nav class="stats">
+        <!--<p>Player 1 Victories: <span class="p1win">0</span></p>-->
+        <!--<p>Player 2 Victories: <span class="p2win">0</span></p>-->
+        <p class="turn_indicator">Player: 1</p>
+        <p class="turn_indicator" id="how_many_to_win">Tiles to Win: 3</p>
+    </nav>
+        <section class="game_area">
+            <div class="tile 1" id="1"></div>
+            <div class="tile 2" id="2"></div>
+            <div class="tile 3" id="3"></div>
+            <div class="tile 4" id="4"></div>
+            <div class="tile 5" id="5"></div>
+            <div class="tile 6" id="6"></div>
+            <div class="tile 7" id="7"></div>
+            <div class="tile 8" id="8"></div>
+            <div class="tile 9" id="9"></div>
+        </section>
+    <footer>
+        <form>
+            <p>Game Size:</p>
+            <button class="plus" type="button">Increase</button>
+            <button class="reset">Reset</button>
+            <button class="restore" type="button">Restore</button>
+        </form>
+    </footer>
+</section>
+</body>
+</html>
